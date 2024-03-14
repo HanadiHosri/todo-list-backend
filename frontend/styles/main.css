@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+.to-do-section {
+    text-align: center;
+}
+
+.title {
+    padding: 50px;
+    font-size: 50px;
+}
+
+.header {
+    background-color: #7ce4ca;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+.input {
+    height: 30px;
+    font-size: 30px;
+}
+
+.button {
+    font-size: 30px;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 25px;
+    transition: 0.2s;
+}
