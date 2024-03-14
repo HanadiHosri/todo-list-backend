@@ -7,16 +7,28 @@
 
 <body>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Login</h1>
-            <label for="username">Username:</label>
-            <input type="text" id="username" class="login-input" /><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" class="login-input" /><br>
+    <section class="page">
+        <div class="page-text">
+            <div>
+                <h1>Login</h1>
+                <h1 class="hidden">Sign up</h1>
+            </div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" class="login-input" />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" class="login-input" />
+            </div>
+            <div>
+                <label for="email" class="hidden">Email</label>
+                <input type="email" id="email" class="email-input hidden" />
+            </div>
             <div>
                 <button onclick="login()" class="button" id="btn">Login</button>
-            </div>  
+                <button class="hidden button">Sign up</button>
+            </div>
         </div>
     </section>
 
