@@ -52,8 +52,8 @@ label {
 
 .login-input {
     height: 30px;
-    font-size: 30px;
-
+    font-size: 25px;
+    padding: 20px 10px;
 }
 
 .hidden {
