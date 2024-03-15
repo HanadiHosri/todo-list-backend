@@ -1,13 +1,3 @@
-function login() {
-    var username = document.getElementById("username");
-    var password = document.getElementById("password");
-    if(username.value == "AdminSEF123" && password.value == "SeF@ctORy$$456") {
-        window.location.href = "main.html"
-    } else {
-        alert("Invalid username or password. Please try again.")
-    }
-}
-
 const loginBtn = document.getElementById("login-btn");
 const signupBtn = document.getElementById("signup-btn");
 const loginText = document.getElementById("login-text");
@@ -52,3 +42,30 @@ const signUp = async () => {
 }
 
 document.getElementById("signup-btn").addEventListener("click", signUp);
+
+const logIn = async () => {
+    try {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const formData = new FormData();
+        formData.append('username', username);
+        formData.append('password', password);
+
+        const response = await fetch("http://localhost/todo_backend/signin.php", {
+            method: "POST",
+            body: formData,
+            mode: 'no-cors'
+        });
+
+        const responseData = await response.text();
+        console.log("response data:", responseData);
+        window.location.href = "main.html";
+
+    } catch (error) {
+        console.error("error:", error);
+        alert("Error occured while sending request");
+    }
+}
+
+document.getElementById("login-btn").addEventListener("click", logIn);
