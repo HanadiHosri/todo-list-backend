@@ -12,6 +12,8 @@ const loginBtn = document.getElementById("login-btn");
 const signupBtn = document.getElementById("signup-btn");
 const loginText = document.getElementById("login-text");
 const signupText = document.getElementById("signup-text");
+const emailLabel = document.getElementById("email-label");
+const emailInput = document.getElementById("email");
 
 
 const signUp = async () => {
@@ -37,7 +39,9 @@ const signUp = async () => {
         loginText.classList.remove("hidden");
         signupBtn.classList.add("hidden");
         signupText.classList.add("hidden");
-        document.getElementById("email").value="";
+        emailLabel.classList.add("hidden");
+        emailInput.classList.add("hidden");
+        
         document.getElementById("username").value="";
         document.getElementById("password").value="";
 
